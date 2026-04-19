@@ -30,7 +30,7 @@ export default function HomePage() {
           <AnimateIn once>
             <div className="inline-flex items-center gap-2 rounded-full bg-orange/20 border border-orange/30 px-4 py-1.5 mb-6">
               <Heart className="h-4 w-4 text-orange fill-orange" />
-              <span className="text-sm font-medium text-orange">Serving Austin Since 2021</span>
+              <span className="text-sm font-medium text-orange">Serving Austin Since 2026</span>
             </div>
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-6">
               Serve With{" "}
