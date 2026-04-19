@@ -312,9 +312,9 @@ export default function VolunteerPage() {
               Volunteer Near You
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
-              Find real volunteer opportunities serving homeless individuals across Austin,
-              Round Rock, Cedar Park, Leander, Georgetown, and the entire Central Texas area.
-              Every listing includes age requirements, hours, and a map.
+              We&apos;ve put together a list of trusted organizations across Austin where you can
+              show up and make a real difference right now. Every listing includes age requirements,
+              hours, and a map &mdash; so you can find the right fit and get started.
             </p>
           </AnimateIn>
         </div>

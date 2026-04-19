@@ -9,19 +9,17 @@ export const metadata = {
 };
 
 const milestones = [
-  { year: "2021", title: "Founded", desc: "Started with a small team of youth volunteers serving meals at Republic Square Park in downtown Austin." },
-  { year: "2022", title: "Expanded", desc: "Grew to serve Round Rock and Cedar Park, partnering with local churches and community centers." },
-  { year: "2023", title: "Scaled Up", desc: "Reached 200+ active volunteers, launched hygiene kit distribution, and served 500+ meals per week." },
-  { year: "2024", title: "Going Stronger", desc: "Expanded partnerships with Front Steps, Mobile Loaves & Fishes, and The Caring Place across Williamson County." },
+  { year: "01", title: "Donated 30+ Meals", desc: "We personally purchased and distributed over 30 meals to homeless individuals in Austin. Every single meal came with a conversation and a real human connection." },
+  { year: "02", title: "Built Our Volunteer Team", desc: "Seven dedicated students came together with one shared goal: show up for their community. Our team is small, but everyone who joins brings heart." },
+  { year: "03", title: "Organized Outreach Events", desc: "We've taken our mission to the streets, connecting directly with unhoused people in Austin — distributing food and raising awareness in the community." },
+  { year: "04", title: "Spreading the Word", desc: "We've started real conversations about local poverty and homelessness — at school, online, and in our neighborhoods — to inspire others to care and act." },
 ];
 
 const stats = [
-  { value: "500+", label: "Meals served weekly" },
-  { value: "5,000+", label: "Hygiene kits distributed" },
-  { value: "200+", label: "Active volunteers" },
-  { value: "12+", label: "Communities reached" },
-  { value: "15+", label: "Partner organizations" },
-  { value: "3 yrs", label: "Years of service" },
+  { value: "30+", label: "Meals donated to date" },
+  { value: "7+", label: "Student volunteers" },
+  { value: "$0", label: "Cost to those we serve" },
+  { value: "100%", label: "Youth-led" },
 ];
 
 export default function ImpactPage() {
@@ -44,7 +42,7 @@ export default function ImpactPage() {
       {/* Stats */}
       <section className="bg-orange py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
             {stats.map((s, i) => (
               <AnimateIn key={s.label} delay={i * 0.1} once className="text-center">
                 <p className="text-5xl font-bold text-white mb-2">{s.value}</p>
@@ -59,8 +57,8 @@ export default function ImpactPage() {
       <section className="bg-cream py-24">
         <div className="mx-auto max-w-4xl px-4">
           <AnimateIn once className="text-center mb-16">
-            <p className="text-orange font-semibold uppercase tracking-wide text-sm mb-3">Our Journey</p>
-            <h2 className="text-4xl font-bold text-navy">How We&apos;ve Grown</h2>
+            <p className="text-orange font-semibold uppercase tracking-wide text-sm mb-3">What We&apos;ve Done</p>
+            <h2 className="text-4xl font-bold text-navy">Our Accomplishments</h2>
           </AnimateIn>
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-orange/30" />
@@ -79,6 +77,49 @@ export default function ImpactPage() {
                 </AnimateIn>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Goals */}
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-4xl px-4">
+          <AnimateIn once className="text-center mb-16">
+            <p className="text-orange font-semibold uppercase tracking-wide text-sm mb-3">Looking Ahead</p>
+            <h2 className="text-4xl font-bold text-navy">Where We&apos;re Headed</h2>
+            <p className="text-navy/60 mt-4">We&apos;re just getting started. Here&apos;s what we&apos;re working toward next.</p>
+          </AnimateIn>
+          <div className="space-y-6">
+            {[
+              {
+                title: "Grow Our Volunteer Base",
+                desc: "We want to bring more students into the fold — people who care and want to show up. The more hands, the more meals we can get out.",
+              },
+              {
+                title: "Host Regular Distribution Events",
+                desc: "Our goal is to run consistent, scheduled outreach events so that the people we serve know when and where to find us.",
+              },
+              {
+                title: "Raise Community Awareness",
+                desc: "We’re building a platform to educate our school and local community about the realities of homelessness and poverty in Austin.",
+              },
+              {
+                title: "Partner With Local Organizations",
+                desc: "We’re working to connect with established Austin nonprofits so we can plug into larger efforts and maximize every resource we have.",
+              },
+            ].map((goal, i) => (
+              <AnimateIn key={goal.title} delay={i * 0.1} once direction="left">
+                <div className="flex gap-6 items-start bg-cream rounded-2xl p-6">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange flex items-center justify-center shadow">
+                    <span className="text-white font-bold text-sm">{String(i + 1).padStart(2, "0")}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-navy mb-1">{goal.title}</h3>
+                    <p className="text-navy/70 leading-relaxed text-sm">{goal.desc}</p>
+                  </div>
+                </div>
+              </AnimateIn>
+            ))}
           </div>
         </div>
       </section>

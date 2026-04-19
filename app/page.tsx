@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimateIn from "@/components/AnimateIn";
-import { Heart, Users, HandHeart, ArrowRight } from "lucide-react";
+import { Heart, Users, HandHeart, ArrowRight, Megaphone, Calendar, Utensils } from "lucide-react";
 
 const stats = [
-  { value: "500+", label: "Meals Served Weekly" },
-  { value: "200+", label: "Volunteers" },
-  { value: "12+", label: "Communities Served" },
-  { value: "3 yrs", label: "Making an Impact" },
+  { value: "30+", label: "Meals Donated to Date" },
+  { value: "7+", label: "Student Volunteers" },
+  { value: "$0", label: "Cost to Those We Serve" },
+  { value: "100%", label: "Youth-Led" },
 ];
 
 const photos = [
@@ -85,14 +85,13 @@ export default function HomePage() {
                 Bringing Hope to Those Who Need It Most
               </h2>
               <p className="text-navy/70 leading-relaxed mb-6">
-                Serve With Heart is a youth-led nonprofit organization dedicated to reaching out to
-                homeless individuals and families across the greater Austin area. We organize meal
-                drives, supply distributions, and community events to remind every person that they
-                are seen, valued, and loved.
+                Serve With Heart is a student-led organization dedicated to helping homeless individuals
+                in Austin. We show up with meals, supplies, and a genuine desire to connect — because
+                every person deserves to feel seen, valued, and cared for.
               </p>
               <p className="text-navy/70 leading-relaxed mb-8">
-                From downtown Austin to Leander, Round Rock, Cedar Park, and beyond — our volunteers
-                go where the need is greatest.
+                We&apos;re a small but growing team of young people who believe that showing up for
+                your neighbors isn&apos;t optional — it&apos;s just the right thing to do.
               </p>
               <Link
                 href="/about"
@@ -121,6 +120,73 @@ export default function HomePage() {
               </div>
             </AnimateIn>
           </div>
+        </div>
+      </section>
+
+      {/* Our Goals */}
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimateIn once className="text-center mb-16">
+            <p className="text-orange font-semibold uppercase tracking-wide text-sm mb-3">What We&apos;re Working Toward</p>
+            <h2 className="text-4xl font-bold text-navy">Our Goals</h2>
+            <p className="text-navy/60 mt-4 max-w-xl mx-auto">We&apos;re a youth-led group with a focused mission. Here&apos;s what we&apos;re actively working on.</p>
+          </AnimateIn>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Utensils className="h-8 w-8 text-orange" />,
+                title: "Distribute Food",
+                desc: "Purchase and hand out meals directly to homeless individuals in our community — no middleman, no barriers. Just food and a friendly face.",
+              },
+              {
+                icon: <Megaphone className="h-8 w-8 text-orange" />,
+                title: "Raise Awareness",
+                desc: "Help our neighbors understand the reality of local poverty and homelessness so more people feel moved to take action.",
+              },
+              {
+                icon: <Calendar className="h-8 w-8 text-orange" />,
+                title: "Organize Outreach Events",
+                desc: "Plan and run community events where we can directly connect with and serve those experiencing homelessness in Austin.",
+              },
+            ].map((card, i) => (
+              <AnimateIn key={card.title} delay={i * 0.15} once>
+                <div className="bg-cream rounded-2xl p-8 h-full flex flex-col">
+                  <div className="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-navy mb-3">{card.title}</h3>
+                  <p className="text-navy/70 leading-relaxed flex-1">{card.desc}</p>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events */}
+      <section className="bg-cream py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <AnimateIn once className="text-center mb-12">
+            <p className="text-orange font-semibold uppercase tracking-wide text-sm mb-3">Events</p>
+            <h2 className="text-4xl font-bold text-navy">Upcoming Outreach Events</h2>
+          </AnimateIn>
+          <AnimateIn once>
+            <div className="bg-white rounded-2xl p-10 text-center shadow-sm border border-gray-100 max-w-lg mx-auto">
+              <Calendar className="h-12 w-12 text-orange mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-navy mb-3">Next Event Coming Soon</h3>
+              <p className="text-navy/70 mb-6">
+                Follow us on Instagram to be the first to know about our next community outreach event — where we&apos;ll be, what we&apos;re doing, and how you can join us.
+              </p>
+              <a
+                href="https://www.instagram.com/servewithheart2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 font-semibold text-white hover:bg-orange-dark transition-all hover:shadow-lg"
+              >
+                Follow @servewithheart2026
+              </a>
+            </div>
+          </AnimateIn>
         </div>
       </section>
 

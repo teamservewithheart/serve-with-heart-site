@@ -51,14 +51,15 @@ export default function AboutPage() {
               <p className="text-orange font-semibold uppercase tracking-wide text-sm mb-3">Our Story</p>
               <h2 className="text-4xl font-bold text-navy mb-6">Started by Youth, Powered by Heart</h2>
               <p className="text-navy/70 leading-relaxed mb-5">
-                Serve With Heart was born out of a simple act of compassion — a group of young people
-                who decided to show up for their unhoused neighbors in Austin. What started as a small
-                meal distribution has grown into a citywide movement touching thousands of lives.
+                Serve With Heart started with a simple decision — a group of students who looked around
+                and decided to do something. We began by purchasing meals and personally handing them
+                out to homeless individuals in our community. No big launch, no fanfare. Just showing up.
               </p>
               <p className="text-navy/70 leading-relaxed mb-8">
-                Today, our volunteers serve across Austin, Round Rock, Cedar Park, Leander, Georgetown,
-                and the broader Central Texas area — partnering with local organizations to maximize
-                every dollar donated and every hour volunteered.
+                Today, we&apos;re a team of 7+ student volunteers committed to donating meals,
+                organizing outreach events, and raising awareness about local poverty. We&apos;re not
+                a massive operation — and we&apos;re proud of that. Every dollar raised goes directly
+                to the people who need it.
               </p>
               <Link
                 href="/impact"
